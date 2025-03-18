@@ -14,6 +14,7 @@ header {
     top: 0;
     background: white;
     z-index: 1000;
+    width: 100%; /* Ensure it spans the full width */
 }
 
 /* Logo Animation */
@@ -49,14 +50,17 @@ header {
     flex-wrap: wrap;
 }
 
+/* Fix for Card Header Border Issue */
 .card {
     flex: 1 1 450px;
     background: white;
     border-radius: 7px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures rounded corners work correctly */
 }
 
+/* Corrected Header Styling for Cards */
 .card header {
     background: #288088;
     border: solid 2px #45ADAD;
@@ -117,7 +121,8 @@ header {
     }
     
     .card ul li:first-child::before {
-        content: '\1F44D'; /* Thumbs up emoji */
+        content: '\1F44D'; 
         margin-right: 10px;
     }
 }
+
